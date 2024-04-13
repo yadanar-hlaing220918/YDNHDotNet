@@ -31,9 +31,6 @@ foreach(DataRow dr in dt.Rows)
     Console.WriteLine("------------------------------------");
 
 }*/
-
-
-
 AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 //adoDotNetExample.Edit(1);
