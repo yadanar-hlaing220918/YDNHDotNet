@@ -9,9 +9,9 @@ namespace YDNHDotNet.ConsoleApp
 {
     internal class AppDbContext : DbContext
     {
-        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.ConfigureConventions(configurationBuilder);
+            optionsBuilder.UseSqlServer(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
         }
         public DbSet<BlogDto> Blogs { get; set; }
     }
