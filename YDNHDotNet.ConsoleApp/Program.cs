@@ -31,11 +31,15 @@ foreach(DataRow dr in dt.Rows)
     Console.WriteLine("------------------------------------");
 
 }*/
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-//adoDotNetExample.Read();
-//adoDotNetExample.Edit(1);
+/*AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+*///adoDotNetExample.Read();
+//adoDotNetExample.Edit(18);
 //adoDotNetExample.Create("title1", "author1", "content1");
 //adoDotNetExample.Update(1, "update title", "update author", "update content");
-adoDotNetExample.Delete(1);
-
+/*adoDotNetExample.Delete(1);
+*/
+//DapperExample dapperExample = new DapperExample();  
+//dapperExample.Run();
+EFCoreExample eFCoreExample = new EFCoreExample();  
+eFCoreExample.Run();
 Console.ReadKey();
