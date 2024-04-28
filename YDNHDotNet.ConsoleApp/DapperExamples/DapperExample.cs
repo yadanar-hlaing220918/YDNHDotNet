@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YDNHDotNet.ConsoleApp.Dtos;
+using YDNHDotNet.ConsoleApp.Services;
 
-namespace YDNHDotNet.ConsoleApp
+namespace YDNHDotNet.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -23,8 +25,8 @@ namespace YDNHDotNet.ConsoleApp
 
         }
         private void Read()
-        {  
-          using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+        {
+            using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> lst = dbConnection.Query<BlogDto>("select * from tbl_blog").ToList();
 
             foreach (BlogDto item in lst)
@@ -32,7 +34,7 @@ namespace YDNHDotNet.ConsoleApp
                 Console.WriteLine(item.blogId);
                 Console.WriteLine(item.blogTitle);
                 Console.WriteLine(item.blogAuthor);
-                Console.WriteLine(item.blogContent );
+                Console.WriteLine(item.blogContent);
                 Console.WriteLine("-------------------");
 
             }
@@ -42,7 +44,7 @@ namespace YDNHDotNet.ConsoleApp
         {
             using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             var item = dbConnection.Query<BlogDto>("select * from tbl_blog where blogId = @BlogId", new BlogDto { blogId = id }).FirstOrDefault();
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found");
                 return;
@@ -67,11 +69,11 @@ namespace YDNHDotNet.ConsoleApp
 
                 VALUES
                         (@BlogTitle,@BlogAuthor,@BlogCOntent)";
-                    using IDbConnection dbConn = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            using IDbConnection dbConn = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
 
-                    int result = dbConn.Execute(query, item);
-                    string message = result > 0 ? "Saving Success." : "Saving Failesd.";
-                    Console.WriteLine(message);
+            int result = dbConn.Execute(query, item);
+            string message = result > 0 ? "Saving Success." : "Saving Failesd.";
+            Console.WriteLine(message);
 
         }
         private void Update(int id, string title, string author, string content)

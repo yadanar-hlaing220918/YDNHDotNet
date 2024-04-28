@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YDNHDotNet.RestApi", "YDNHDotNet.RestApi\YDNHDotNet.RestApi.csproj", "{82991B91-7F41-46FB-9893-4DA781F0C4B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{196826EE-A0D2-46A1-994C-F445AEB24D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{196826EE-A0D2-46A1-994C-F445AEB24D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{196826EE-A0D2-46A1-994C-F445AEB24D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82991B91-7F41-46FB-9893-4DA781F0C4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82991B91-7F41-46FB-9893-4DA781F0C4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82991B91-7F41-46FB-9893-4DA781F0C4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82991B91-7F41-46FB-9893-4DA781F0C4B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

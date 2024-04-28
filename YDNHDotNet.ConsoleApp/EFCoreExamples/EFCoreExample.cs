@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YDNHDotNet.ConsoleApp.Dtos;
 
-namespace YDNHDotNet.ConsoleApp
+namespace YDNHDotNet.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
 
@@ -13,7 +14,7 @@ namespace YDNHDotNet.ConsoleApp
 
         public void Run()
         {
-           Read();
+            Read();
             //Edit(8);
             //Create("title 100", "author 100", "content 100");
             // Update(9, "title updated", "author updated", "content updated");

@@ -1,6 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using YDNHDotNet.ConsoleApp;
+using YDNHDotNet.ConsoleApp.EFCoreExamples;
 
 Console.WriteLine("Hello, World!");
 
